@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+	<link rel="stylesheet" href="hojacss.css">
+</head>
+<body>
+
+<h1>Header</h1>
+<p title="tooltip" id="p1">Párrafo, margen</p>
+<p id="p2">Párrafo2, padding, borde</p>
+<a href="https://www.google.com">link a google</a>
+<!-- Se pueden cambiar los atributos de los links con style -->
+<h2>Montaña</h2>
+<p>
+	<a href="https://es.wikipedia.org/wiki/Archivo:Everest_kalapatthar.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Everest_kalapatthar.jpg" alt="Montaña" style="float:left;width:240px;height:350px;">
+	</a>
+	Imagen flotando a la izquierda del texto con link a wikipedia
+	<br> Imagen de azul y rojo, si haces click en el color azul, busca azul en google, si haces click en el color rojo, busca rojo en google
+	<br> <img src="http://2.bp.blogspot.com/-YSUqmiNYILU/TpNbVgnUkAI/AAAAAAAAATA/-Kg26mkHZeM/s1600/Color+rojo+y+color+azul..jpg" alt="azul/rojo" style="width: 80px; height: 50px" usemap="#color";>
+	<map name="color">
+		<area shape="rect" coords="0,0,35,50" alt="rojo" href="https://www.google.com.mx/search?q=rojo&oq=rojo&aqs=chrome..69i57j35i39j69i60j69i61j0l2.764j0j7&sourceid=chrome&ie=UTF-8">
+		<area shape="rect" coords="36,0,80,50" alt="azul" href="https://www.google.com.mx/search?q=azul&oq=azul&gs_l=psy-ab.3..0i67k1l3j0.13512.14254.0.14740.4.4.0.0.0.0.243.467.2-2.2.0....0...1.1.64.psy-ab..2.2.466.ibpV4MNb-40">
+	</map>
+</p>
+	<table style="width:100%" id="t01">
+	  <tr>
+	    <th>Nombre</th>
+	    <th>Apellido</th> 
+	    <th>Edad</th>
+	  </tr>
+	  <tr>
+	    <td>Jill</td>
+	    <td>Smith</td> 
+	    <td>50</td>
+	  </tr>
+	  <tr>
+	    <td>Eve</td>
+	    <td>Jackson</td> 
+	    <td>94</td>
+	  </tr>
+	  <!-- Usar colspan para agregar más columnas debajo de una celda, ej: <th colspan="2" -->
+	</table>
+<p>
+Lista desordenada
+	<ul style="list-style-type:square">
+	  <li>Coffee</li>
+	  <li>Tea</li>
+	  <li>Milk</li>
+	</ul>
+	<br> Lista ordeanda
+	<ol type="1">
+	  <li>Coffee</li>
+	  <li>Tea</li>
+	  <li>Milk</li>
+	</ol>
+	<br> Lista descriptiva
+	<dl>
+	  <dt>Coffee</dt>
+	  <dd>- black hot drink</dd>
+	  <dt>Milk</dt>
+	  <dd>- white cold drink</dd>
+	</dl>
+	<!-- Se pueden anidar las listas y otros elementos (img, links, etc.) -->
+</p>
+<h3>My <span style="color:red">Important</span> Heading</h3>
+<div style="background-color:black;color:white;padding:20px;">
+  <h2>London</h2>
+  <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+</div>
+<!-- usas las clases de div en vez del atributo ID si quieres usar el mismo formato en varias divisiones, de la misma manera puedes usar una clase de span para usar el mismo formato en diferentes partes de texto-->
+<iframe src="https://www.google.com"></iframe>
+
+<script>
+function light(sw) {
+    var pic;
+    if (sw == 0) {
+        pic = "pic_bulboff.gif"
+    } else {
+        pic = "pic_bulbon.gif"
+    }
+    document.getElementById('myImage').src = pic;
+}
+</script>
+
+<noscript>Sorry, your browser does not support JavaScript!</noscript>
+
+<img id="myImage" src="pic_bulboff.gif" width="100" height="180">
+
+<p>
+	<button type="button" onclick="light(1)">Light On</button>
+	<button type="button" onclick="light(0)">Light Off</button>
+</p>
+</body>
+</html>
